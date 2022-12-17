@@ -86,7 +86,7 @@ export class SpeakerSubscription extends PlayerSubscription {
 			return;
 		}
 		this.queueLock = true;
-		const nextResource = this.queue.shift()!;
+		const nextResource = this.queue.shift();
 		try {
 			this.player.play(nextResource);
 			this.queueLock = false;
